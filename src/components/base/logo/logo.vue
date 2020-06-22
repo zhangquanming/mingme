@@ -1,6 +1,6 @@
 <template>
   <div class="logo" :style="styles" @click="handleClick">
-    <img src="/static/images/logo-lm-v3.png" alt="Mingme" />
+    <img src="@/assets/images/logo-lm-v3.png" alt="Mingme" />
   </div>
 </template>
 

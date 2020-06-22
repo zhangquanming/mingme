@@ -88,7 +88,7 @@
             <div class="p-container" data-locked="false">
               <div class="p-block p-center" id="ptop">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-1.jpg" alt="New Website for Christian Louboutin" />
+                  <img src="@/assets/images/lm-project-1.jpg" alt="New Website for Christian Louboutin" />
                   <div class="caption">
                     <span>New Website for Christian Louboutin</span>
                   </div>
@@ -100,7 +100,7 @@
             <div class="p-container">
               <div class="p-block p-left" id="p1l" data-x="-600" ref="p1l">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-2.jpg" alt="Monsieur London" />
+                  <img src="@/assets/images/lm-project-2.jpg" alt="Monsieur London" />
                   <div class="caption">
                     <span>Monsieur London</span>
                   </div>
@@ -109,7 +109,7 @@
               </div>
               <div class="p-block p-right" id="p1r" data-x="-600" ref="p1r">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-3.jpg" alt="Field.io" />
+                  <img src="@/assets/images/lm-project-3.jpg" alt="Field.io" />
                   <div class="caption">
                     <span>Field.io</span>
                   </div>
@@ -121,7 +121,7 @@
             <div class="p-container">
               <div class="p-block p-left " id="p2l" data-x="-1600" ref="p2l">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-4.jpg" alt="Cubink" />
+                  <img src="@/assets/images/lm-project-4.jpg" alt="Cubink" />
                   <div class="caption">
                     <span>Cubink</span>
                   </div>
@@ -130,7 +130,7 @@
               </div>
               <div class="p-block p-right" id="p2r" data-x="-1600" ref="p2r">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-5.jpg" alt="Postmatter" />
+                  <img src="@/assets/images/lm-project-5.jpg" alt="Postmatter" />
                   <div class="caption">
                     <span>Postmatter</span>
                   </div>
@@ -143,7 +143,7 @@
             <div class="p-container">
               <div class="p-block p-left" id="p3l" data-x="-3600" ref="p3l">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-6.jpg" alt="Affinion International" />
+                  <img src="@/assets/images/lm-project-6.jpg" alt="Affinion International" />
                   <div class="caption">
                     <span>Affinion International</span>
                   </div>
@@ -152,7 +152,7 @@
               </div>
               <div class="p-block p-right" id="p3r" data-x="-3600" ref="p3r">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-7.jpg" alt="Beauty for Christian Louboutin" />
+                  <img src="@/assets/images/lm-project-7.jpg" alt="Beauty for Christian Louboutin" />
                   <div class="caption">
                     <span>Beauty for Christian Louboutin</span>
                   </div>
@@ -165,7 +165,7 @@
             <div class="p-container">
               <div class="p-block p-left" id="p4l" data-x="-5600" ref="p4l">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-8.jpg" alt="Serge Betsen" />
+                  <img src="@/assets/images/lm-project-8.jpg" alt="Serge Betsen" />
                   <div class="caption">
                     <span>Serge Betsen</span>
                   </div>
@@ -174,7 +174,7 @@
               </div>
               <div class="p-block p-right " id="p4r" data-x="-5600" ref="p4r">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-9.jpg" alt=" Couturelab" />
+                  <img src="@/assets/images/lm-project-9.jpg" alt=" Couturelab" />
                   <div class="caption">
                     <span>Couturelab</span>
                   </div>
@@ -187,7 +187,7 @@
             <div class="p-container">
               <div class="p-block p-left" id="p5l" data-x="-7600" ref="p5l">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-10.jpg" alt="La Moulade" />
+                  <img src="@/assets/images/lm-project-10.jpg" alt="La Moulade" />
                   <div class="caption">
                     <span>La Moulade</span>
                   </div>
@@ -196,7 +196,7 @@
               </div>
               <div class="p-block p-right" id="p5r" data-x="-7600" ref="p5r">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-11.jpg" alt="Caratime.com" />
+                  <img src="@/assets/images/lm-project-11.jpg" alt="Caratime.com" />
                   <div class="caption">
                     <span>Caratime.com</span>
                   </div>
@@ -209,7 +209,7 @@
             <div class="p-container" data-x="-9600">
               <div class="p-block p-center" id="p6" ref="p6">
                 <span class="project-pic">
-                  <img src="/static/images/lm-project-12.jpg" alt="Barnaby Roper" />
+                  <img src="@/assets/images/lm-project-12.jpg" alt="Barnaby Roper" />
                   <div class="caption">
                     <span>Barnaby Roper</span>
                   </div>
@@ -331,7 +331,7 @@ export default {
     this.mingme.POS = document.documentElement.scrollTop
   },
   methods: {
-    listenerFunction (e) {
+    listenerFunction () {
       window.addEventListener('scroll', this.handleScroll, true)
       window.addEventListener('mousemove', this.playFooter, true)
       window.addEventListener('resize', this.resetWH, true)
@@ -1325,7 +1325,7 @@ footer {
   margin: auto;
   width: 190px;
   height: 100px;
-  background: url('/static/images/sprite-velo.png') no-repeat center top;
+  background: url('../../assets/images/sprite-velo.png') no-repeat center top;
 }
 #chapter-title .label {
   //   text-transform: uppercase;
@@ -1738,7 +1738,7 @@ footer {
   width: 190px;
   height: 84px;
   margin: 0 auto 70px auto;
-  background: url(/static/images/sprite-chaussures.png) -570px;
+  background: url(../../assets/images/sprite-chaussures.png) -570px;
 }
 #contact-footer h2 {
   width: 660px;
