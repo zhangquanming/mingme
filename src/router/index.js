@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const Index = () => import(/* webpackChunkName: "index" */ '../views/index/home.vue')
+const Index = () => import(/* webpackChunkName: "index" */ '@/views/index/home')
 
 const routes = [
   {

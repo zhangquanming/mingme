@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import './common/style/index.less'
+import './common/styles/index.less'
 
 Vue.config.productionTip = false
 
