@@ -28,8 +28,9 @@ export default {
 .app-footer {
   width: 100%;
   height: @heightFooter;
-  background-color: #ffd000;
+  background-color: @colorPrimary;
   padding: 50px 0;
+  color: @colorPrimaryText;
   .app-footer-cont {
     width: 960px;
     margin: 0 auto;
@@ -41,13 +42,13 @@ export default {
       justify-content: center;
       align-items: center;
       a {
-        color: #fff;
+        color: @colorWhiteText;
         transition: color 0.3s;
         width: 40px;
         height: 40px;
         margin: 0 20px;
         &:hover {
-          color: #000;
+          color: @colorBlackText;
         }
         i {
           font-size: 40px;
