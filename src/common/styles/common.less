@@ -15,15 +15,15 @@ body {
 
 /*==== 电子书 章节链接样式 =====*/
 .ebook-chapter-link {
-  color: @colorPrimaryText;
+  color: @colorTextSub;
   &:hover {
-    color: @colorRegularText;
+    color: @colorTextContent;
   }
 }
 
 /*==== 电子书 目录链接样式 =====*/
 .ebook-catalog-link {
-  color: @colorPrimaryText;
+  color: @colorTextTitle;
   &:hover {
     color: @colorError;
   }
@@ -38,7 +38,7 @@ body {
   line-height: 18px;
   color: #fff;
   text-align: center;
-  background-color: @colorRegularText;
+  background-color: @colorTextSub;
   &::before,
   &::after {
     content: '';
@@ -49,12 +49,12 @@ body {
   }
   &:before {
     left: 0;
-    border-left: 9px solid @colorRegularText;
+    border-left: 9px solid @colorTextSub;
     border-bottom: 3px solid transparent;
   }
   &:after {
     right: 0;
-    border-right: 9px solid @colorRegularText;
+    border-right: 9px solid @colorTextSub;
     border-bottom: 3px solid transparent;
   }
 }
@@ -99,13 +99,13 @@ input.common-input {
   line-height: 40px;
   height: 40px;
   font-size: 14px;
-  background-color: @colorBackgroundW;
+  background-color: @colorBgBody;
   border: 1px solid transparent;
   border-radius: 5px;
 }
 
 input.common-input:hover {
-  background-color: lighten(@colorBackgroundW, 2%);
+  background-color: lighten(@colorBgBody, 2%);
 }
 
 input.common-input:focus {
@@ -118,7 +118,7 @@ textarea.common-textarea {
   margin: 5px 0;
   padding: 10px;
   font-size: 14px;
-  background-color: @colorBackgroundW;
+  background-color: @colorBgBody;
   border: 1px solid transparent;
   border-radius: 5px;
   min-height: 40px;
@@ -126,7 +126,7 @@ textarea.common-textarea {
 }
 
 textarea.common-textarea:hover {
-  background-color: lighten(@colorBackgroundW, 2%);
+  background-color: lighten(@colorBgBody, 2%);
 }
 
 textarea.common-textarea:focus {

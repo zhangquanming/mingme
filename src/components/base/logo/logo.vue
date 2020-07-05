@@ -1,6 +1,6 @@
 <template>
   <div class="logo" :style="styles" @click="handleClick">
-    <img src="@/assets/images/logo-lm-v3.png" alt="Mingme" />
+    <img :src="logoColor" alt="Mingme" />
   </div>
 </template>
 
@@ -8,6 +8,10 @@
 export default {
   name: 'Logo',
   props: {
+    color: {
+      type: String,
+      default: 'white'
+    },
     w: {
       type: [Number, String],
       default: 'auto'
@@ -18,6 +22,13 @@ export default {
     }
   },
   computed: {
+    logoColor () {
+      if (this.color === 'black') {
+        return require('@/assets/images/logo.png')
+      } else {
+        return require('@/assets/images/logo2.png')
+      }
+    },
     styles () {
       return {
         width: typeof this.w === 'number' ? `${this.w}px` : this.w,

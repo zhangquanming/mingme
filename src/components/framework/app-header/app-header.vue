@@ -1,11 +1,11 @@
 <template>
-  <div :class="['app-header-wrap', menuTheme]">
+  <div class="app-header-wrap">
     <div class="z-container">
       <div class="app-header">
         <router-link to="/" class="app-header-brand">
           <logo :h="40" />
         </router-link>
-        <AppMenu :theme="menuTheme" />
+        <AppMenu />
       </div>
     </div>
   </div>
@@ -23,7 +23,6 @@ export default {
   },
   data () {
     return {
-      menuTheme: 'black',
     }
   }
 }
@@ -36,10 +35,9 @@ export default {
   left: 0;
   width: 100%;
   z-index: 999;
-  transition: background ease 0.3s;
-  color: @colorPrimaryText;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: @colorTextSilver;
   .app-header {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;

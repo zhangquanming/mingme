@@ -6,20 +6,20 @@
       <header :style="headTop" ref="header">
         <div class="content">
           <router-link to="/">
-            <logo :w="180" />
+            <logo :w="180" color="black" />
           </router-link>
           <nav class="menu">
             <div class="menu-slider">
               <div class="bar" :style="barWidth"></div>
             </div>
             <ul>
-              <li class="menu-part"><a id="link-chap1" class="iconfont iconwenti2 chapters" @click="handleNav('home')" data-who="home">Home</a></li>
-              <li class="menu-part"><a id="link-chap2" class="iconfont iconwenti2 chapters" @click="handleNav('services')" data-who="services">Services</a></li>
-              <li class="menu-part"><a id="link-chap3" class="iconfont iconwenti2 chapters" @click="handleNav('projects')" data-who="projects">Work</a></li>
+              <li class="menu-part"><a id="link-chap1" class="iconfont iconwangzhi chapters" @click="handleNav('home')" data-who="home">Home</a></li>
+              <li class="menu-part"><a id="link-chap2" class="iconfont iconwangzhi chapters" @click="handleNav('services')" data-who="services">Services</a></li>
+              <li class="menu-part"><a id="link-chap3" class="iconfont iconwangzhi chapters" @click="handleNav('projects')" data-who="projects">Work</a></li>
             </ul>
           </nav>
           <div class="contact">
-            <span class="iconfont iconwenti2 mail-btn" @click="handleNav('contact')"></span>
+            <span class="iconfont iconwangzhi mail-btn" @click="handleNav('contact')"></span>
           </div>
         </div>
       </header>
@@ -224,7 +224,7 @@
         <!-- #projects-elevator -->
       </section>
       <footer :style="footerBottom">
-        <div class="iconfont iconwenti2 scrolldown"></div>
+        <div class="iconfont iconwangzhi scrolldown"></div>
       </footer>
       <div id="contact-footer-support" ref="contactFooterSupport"></div>
       <section id="contact-footer" ref="contactFooter">
@@ -1231,21 +1231,6 @@ footer {
       border: 1px solid #ffffff;
       -webkit-animation: pulse 2s infinite;
       animation: pulse 2s infinite;
-    }
-  }
-  @-webkit-keyframes pulse {
-    0% {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-      opacity: 0;
     }
   }
   @keyframes pulse {
