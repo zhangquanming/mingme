@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      isShowMenu: false,
+      isShowMenu: false
     }
   },
   computed: {
@@ -32,15 +32,15 @@ export default {
       'navList'
     ]),
     classes () {
-      return this.isShowMenu ? 'app-menu-show' : '';
-    },
+      return this.isShowMenu ? 'app-menu-show' : ''
+    }
   },
   watch: {},
   created () { },
   mounted () { },
   methods: {
     handleToggleMenu () {
-      this.isShowMenu = !this.isShowMenu;
+      this.isShowMenu = !this.isShowMenu
     }
   }
 }

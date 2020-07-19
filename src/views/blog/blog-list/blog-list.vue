@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import api from '@/api/index'
+// import api from '@/api/index.js'
 export default {
   name: 'BlogList',
   components: {},
@@ -34,10 +34,10 @@ export default {
     }
   },
   mounted () {
-    this.requestblogList();;;;;
+    this.requestblogList()
   },
   methods: {
-    //请求文章列表
+    // 请求文章列表
     requestblogList () {
     },
     // 搜索文章
