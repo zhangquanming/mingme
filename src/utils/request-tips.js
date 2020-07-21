@@ -49,3 +49,32 @@ function transformErrMsg (response) {
     status: response.status
   }
 }
+
+// 检查 HTTP 状态码，做一些处理
+function checkHttpStatus (response) {
+  // 成功或者协商缓存直接返回
+  if (response && (response.status === 200 || response.status === 304)) {
+    return response
+  }
+  // 登录过期了，清空token,userInfo缓存
+  if (response && response.status === 401) {
+    webStore.sessionClear()
+    store.dispatch('changeUserInfo', null)
+  }
+  // 其他直接返回一个错误
+  return Promise.reject(transformErrMsg(response))
+}
+
+// 检查后端返回状态
+function checkBackendCode (res) {
+  if (res && res.data) {
+    if (res.data.code === 'success' || res.data.code === 200) {
+      return res.data
+    } else {
+      console.log('后端给出的异常:', res)
+      return Promise.reject(res.data)
+    }
+  }
+}
+
+export { checkHttpStatus, checkBackendCode }
