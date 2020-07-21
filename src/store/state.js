@@ -21,7 +21,10 @@ const state = {
       name: '后台管理',
       path: '/admin'
     }
-  ]
+  ],
+  userInfo: null,
+  showSignInModal: false,
+  showSignUpModal: false
 }
 
 export default state
