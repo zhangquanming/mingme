@@ -38,19 +38,19 @@
           <img class="topic-img" :src="topic.poster" alt="" />
         </router-link>
       </div>
-      <!-- <md-preview :content="firstParagraph" :padding="0" /> -->
+      <md-preview :content="firstParagraph" :padding="0" />
     </div>
   </div>
 </template>
 
 <script>
 import Icon from '@/components/base/icon/icon'
-// import MdPreview from '@/components/kit/md-preview/'
+import MdPreview from '@/components/kit/md-preview/md-preview'
 export default {
   name: 'TopicItem',
   components: {
-    Icon
-    // MdPreview
+    Icon,
+    MdPreview
   },
   props: {
     topic: {

@@ -9,9 +9,9 @@
         </template>
       </div>
       <div class="list-side z-col-md-18 z-col-xl-15">
-        <div class="search-wrap">
+        <Card class="search-wrap">
           <search-blog @on-search="handleSearch"></search-blog>
-        </div>
+        </Card>
       </div>
     </div>
   </div>

@@ -38,7 +38,6 @@ export default {
 <style lang="less" scoped>
 .z-icon {
   display: inline-block;
-  line-height: 1;
   vertical-align: middle;
 }
 </style>
