@@ -101,7 +101,7 @@ instance.interceptors.response.use(
     } else {
       return Promise.reject({
         code: 'cancel',
-        message: '无 response 可能 cancel，取消上次请求'
+        message: '请求失败，请检查网络'
       })
     }
   }

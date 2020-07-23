@@ -1,33 +1,33 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import routes from './routes'
+// import store from '@/store/'
 
-Vue.use(VueRouter)
-
-const Index = () => import(/* webpackChunkName: "index" */ '@/views/index/home')
-const AppLayout = () => import(/* webpackChunkName: "index" */ '@/components/framework/app-layout/app-layout')
-const BlogList = () => import(/* webpackChunkName: "index" */ '@/views/blog/blog-list/blog-list')
-
-const routes = [
-  {
-    path: '/',
-    name: 'Index',
-    component: Index
-  },
-  {
-    path: '/blog',
-    component: AppLayout,
-    children: [
-      {
-        path: '',
-        name: '全部文章',
-        component: BlogList
-      }
-    ]
+const scrollBehavior = (to, from, savedPosition) => {
+  if (to.hash) {
+    return {
+      selector: to.hash
+    }
   }
-]
+  if (savedPosition) {
+    return savedPosition
+  } else {
+    return { x: 0, y: 0 }
+  }
+}
 
-const router = new VueRouter({
-  routes
-})
+const createRouter = () =>
+  new VueRouter({
+    mode: 'history',
+    scrollBehavior,
+    routes: routes
+  })
 
+const router = createRouter()
+
+// router.beforeEach(async (to, from, next) => {
+//   const categoryList = store.getters['categoryList']
+//   if (categoryList.length === 0) {
+//     await store.dispatch('getCategoryList')
+//   }
+//   next()
+// })
 export default router

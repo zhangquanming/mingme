@@ -7,11 +7,13 @@
             <topic-item :topic="blog"></topic-item>
           </Card>
         </template>
+        <card-no-data v-else style="height: 300px;" />
       </div>
       <div class="list-side z-col-md-18 z-col-xl-15">
         <Card class="search-wrap">
-          <search-blog @on-search="handleSearch"></search-blog>
+          <search-blog @on-search="handleSearch" />
         </Card>
+        <CardCategory :categoryList="categoryList" />
       </div>
     </div>
   </div>
@@ -20,14 +22,19 @@
 <script>
 import Card from '@/components/base/card/card'
 import TopicItem from '@/components/kit/topic-item/topic-item'
+import CardNoData from '@/components/kit/card-no-data/card-no-data'
 import SearchBlog from '@/components/kit/search-blog/search-blog'
+import CardCategory from '@/components/kit/card-category/card-category'
 import api from '@/api/index'
+import { mapGetters } from 'vuex'
 export default {
   name: 'BlogList',
   components: {
     Card,
     TopicItem,
-    SearchBlog
+    CardNoData,
+    SearchBlog,
+    CardCategory
   },
   data () {
     return {
@@ -37,7 +44,12 @@ export default {
       isLoading: false
     }
   },
-  computed: {},
+  computed: {
+    ...mapGetters([
+      'categoryList',
+      'categoryIdByValue'
+    ])
+  },
   watch: {
     $route: {
       hander () {
@@ -56,7 +68,7 @@ export default {
       const params = {
         page: this.page,
         limit: this.limit,
-        category: ''
+        category: this.categoryIdByValue(this.$route.params.category)
       }
       api.GetBlogList(params).then(res => {
         this.blogList = res.result.list
@@ -67,7 +79,7 @@ export default {
     },
     // 搜索文章
     handleSearch (keyword) {
-      console.log(keyword)
+      this.$router.push({ path: '/blog/search', query: { keyword } })
     }
   }
 }

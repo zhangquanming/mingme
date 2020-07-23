@@ -89,24 +89,23 @@ export default {
 
 <style lang="less" scoped>
 .z-toast {
-  background: #fff;
   &-wrapper {
     position: fixed;
     top: 80px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     z-index: 9999;
     margin: auto;
     font-size: 14px;
-    text-align: center;
     border-radius: 4px;
-    padding: 10px 40px 10px 10px;
+    padding: 5px 40px 5px 10px;
     background-color: mix(@colorTextWhite, @colorTextContent, 90%);
     border: 1px solid mix(@colorTextWhite, @colorTextContent, 80%);
     color: @colorTextContent;
   }
   .z-toast-content {
-    vertical-align: middle;
-    text-align: center;
+    min-width: 150px;
+    width: auto;
   }
   & .z-toast-close {
     position: absolute;

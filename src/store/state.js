@@ -24,7 +24,10 @@ const state = {
   ],
   userInfo: null,
   showSignInModal: false,
-  showSignUpModal: false
+  showSignUpModal: false,
+  categoryList: [],
+  blogResult: {},
+  highLightIndex: 0 // markdown 目录高亮索引
 }
 
 export default state
