@@ -4,8 +4,18 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  name: 'app',
+  components: {},
+  mounted () {
+    window.$toast = this.$toast
+  }
+}
+</script>
+
 <style lang="less">
-@import url('//at.alicdn.com/t/font_1905390_ax09ypx961r.css');
 #app {
   height: 100%;
 }

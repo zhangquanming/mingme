@@ -5,6 +5,17 @@ import store from './store'
 
 import '@/common/styles/index.less'
 
+import * as filters from './filters'
+
+import Toast from './components/base/toast/'
+
+// 注册全局 filter
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
+Vue.use(Toast)
+
 Vue.config.productionTip = false
 
 new Vue({

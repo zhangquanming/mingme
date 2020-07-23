@@ -123,7 +123,7 @@ export default {
           return Promise.reject(err)
         } else {
           // window.$toast 是在 App.vue 中 声明的
-          // window.$toast.error(err.message)
+          window.$toast.error(err.message)
           return Promise.reject(err)
         }
       })
@@ -143,7 +143,7 @@ export default {
           return Promise.reject(err)
         } else {
           // window.$toast 是在 App.vue 中 声明的
-          // window.$toast.error(err.message)
+          window.$toast.error(err.message)
           return Promise.reject(err)
         }
       })
@@ -163,7 +163,7 @@ export default {
           return Promise.reject(err)
         } else {
           // window.$toast 是在 App.vue 中 声明的
-          // window.$toast.error(err.message)
+          window.$toast.error(err.message)
           return Promise.reject(err)
         }
       })

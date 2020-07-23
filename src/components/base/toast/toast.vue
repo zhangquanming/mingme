@@ -1,8 +1,8 @@
 <template>
   <div class="z-toast">
     <transition :name="mergedOption.transition">
-      <div v-show="showing" :class="clazz" :id="mergedOption.id" class="z-toast z-toast-wrapper">
-        <Icon v-if="option.icon" :type="option.icon" style="margin-right: 5px;"></Icon>
+      <div v-show="showing" class="z-toast z-toast-wrapper" :class="clazz" :id="mergedOption.id">
+        <Icon v-if="option.icon" :size="20" :type="option.icon" style="margin-right: 10px;"></Icon>
         <span class="z-toast-content" v-html="mergedOption.message"></span>
         <a class="z-toast-close" v-if="mergedOption.closeable" @click="close">&times;</a>
       </div>
@@ -89,77 +89,95 @@ export default {
 
 <style lang="less" scoped>
 .z-toast {
-  .z-toast-wrapper {
+  background: #fff;
+  &-wrapper {
     position: fixed;
-    top: 80%;
+    top: 80px;
     display: inline-block;
     z-index: 9999;
     margin: auto;
-    color: white;
     font-size: 14px;
     text-align: center;
     border-radius: 4px;
-    padding: 5px 10px;
-    background-color: fade(@colorTextContent, 75%);
+    padding: 10px 40px 10px 10px;
+    background-color: mix(@colorTextWhite, @colorTextContent, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorTextContent, 80%);
+    color: @colorTextContent;
   }
   .z-toast-content {
     vertical-align: middle;
     text-align: center;
   }
-  .z-toast-close {
+  & .z-toast-close {
     position: absolute;
-    top: 0;
-    right: 5px;
-    color: white;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #c0c4cc;
+    font-size: 16px;
+    height: 24px;
+    line-height: 22px;
+    font-weight: bold;
   }
   // position
-  &-top {
+  .z-toast-top {
     top: 80px;
     bottom: auto;
   }
-  &-middle {
+  .z-toast-middle {
     top: 50%;
   }
-  &-bottom {
+  .z-toast-bottom {
     top: auto;
     bottom: 0;
   }
-  &-right {
+  .z-toast-right {
     right: 0;
     left: auto;
   }
-  &-left {
+  .z-toast-left {
     right: auto;
     left: 0;
   }
-  &-center {
+  .z-toast-center {
     left: 50%;
     transform: translateX(-50%);
   }
 
   // theme
-  &-primary {
-    background-color: fade(@colorPrimary, 80%);
+  .z-toast-primary {
+    background-color: mix(@colorTextWhite, @colorPrimary, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorPrimary, 80%);
+    color: @colorPrimary;
   }
-  &-info {
-    background-color: fade(@colorInfo, 80%);
+  .z-toast-info {
+    background-color: mix(@colorTextWhite, @colorInfo, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorInfo, 80%);
+    color: @colorInfo;
   }
-  &-success {
-    background-color: fade(@colorSuccess, 80%);
+  .z-toast-success {
+    background-color: mix(@colorTextWhite, @colorSuccess, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorSuccess, 80%);
+    color: @colorSuccess;
   }
-  &-warning {
-    background-color: fade(@colorWarning, 80%);
+  .z-toast-warning {
+    background-color: mix(@colorTextWhite, @colorWarning, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorWarning, 80%);
+    color: @colorWarning;
   }
-  &-error {
-    background-color: fade(@colorError, 80%);
+  .z-toast-error {
+    background-color: mix(@colorTextWhite, @colorError, 90%);
+    border: 1px solid mix(@colorTextWhite, @colorError, 80%);
+    color: @colorError;
   }
 
   // size
-  &-small {
+  .z-toast-small {
     padding: 2px 5px;
     font-size: 12px;
   }
-  &-large {
+  .z-toast-large {
     padding: 10px 15px;
     font-size: 16px;
   }

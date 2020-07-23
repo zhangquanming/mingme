@@ -291,7 +291,7 @@ export default {
         // -----------------------
         // @constants
         // ------------------------
-        URL: 'http://localhost:8080/#/',
+        URL: 'http://localhost:8082/#/',
         CHAPTERS: { home: 0, services: 1, projects: 2, contact: 3 },
         CHAPTER: 0,
         SCROLL: { ratio: 190 },
