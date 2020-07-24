@@ -233,7 +233,7 @@
           Let's talk about your project,<br />
           or just come and say <b>hello!</b>
         </h2>
-        <app-footer></app-footer>
+        <app-footer />
       </section>
     </div>
   </div>
@@ -330,13 +330,18 @@ export default {
     this.mingme.X = this.mingme.SceneHeight / this.mingme.SCROLL.ratio
     this.mingme.POS = document.documentElement.scrollTop
   },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll, true)
+    window.removeEventListener('mousemove', this.playFooter, true)
+    window.removeEventListener('resize', this.resetWH, true)
+  },
   methods: {
     listenerFunction () {
       window.addEventListener('scroll', this.handleScroll, true)
       window.addEventListener('mousemove', this.playFooter, true)
       window.addEventListener('resize', this.resetWH, true)
     },
-    handleScroll () {
+    handleScroll (e) {
       //   console.log(window.pageYOffset)
       let newX = window.pageYOffset / this.mingme.X
       let oldX = this.mingme.POS / this.mingme.X

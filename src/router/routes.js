@@ -1,7 +1,9 @@
+const isMobile = window.matchMedia('(max-width: 992px)').matches
+const name = isMobile ? 'mobile' : 'home'
 
 const AppLayout = () => import(/* webpackChunkName: "AppLayout" */ '@/components/framework/app-layout/app-layout')
 
-const Index = () => import(/* webpackChunkName: "Index" */ '@/views/index/home')
+const Index = (indexView) => () => import(/* webpackChunkName: "Index" */ '@/views/index/' + indexView)
 
 const BlogList = () => import(/* webpackChunkName: "BlogList" */ '@/views/blog/blog-list/blog-list')
 const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/blog/blog-detail/blog-detail')
@@ -9,8 +11,8 @@ const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/bl
 const routes = [
   {
     path: '/',
-    name: 'Index',
-    component: Index
+    name: '首页',
+    component: Index(name)
   },
   {
     path: '/blog',
