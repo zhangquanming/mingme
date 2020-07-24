@@ -240,9 +240,9 @@
 </template>
 
 <script>
-import Loader from './loader'
+import Loader from './components/loader'
 import Logo from '@/components/base/logo/logo'
-import HomeNav from './home-nav'
+import HomeNav from './components/home-nav'
 import AppFooter from '@/components/framework/app-footer/app-footer'
 
 export default {

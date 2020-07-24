@@ -1,7 +1,9 @@
 <template>
   <div class="z-container">
     <div class="z-row">
-      <div class="z-col-lg-42 z-col-xl-45"></div>
+      <div class="z-col-lg-42 z-col-xl-45">
+        <Card padding="0"></Card>
+      </div>
       <div class="z-col-lg-18 z-col-xl-15 visible-lg visible-xl"></div>
     </div>
   </div>
