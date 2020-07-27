@@ -7,6 +7,7 @@ const Index = (indexView) => () => import(/* webpackChunkName: "Index" */ '@/vie
 
 const BlogList = () => import(/* webpackChunkName: "BlogList" */ '@/views/blog/blog-list/blog-list')
 const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/blog/blog-detail/blog-detail')
+const BlogSearch = () => import(/* webpackChunkName: 'BlogSearch' */ '@/views/blog/blog-search/blog-search')
 
 const routes = [
   {
@@ -22,6 +23,16 @@ const routes = [
         path: '',
         name: '全部文章',
         component: BlogList
+      },
+      {
+        path: ':category',
+        name: '文章',
+        component: BlogList
+      },
+      {
+        path: 'search',
+        name: '搜索',
+        component: BlogSearch
       },
       {
         path: 'detail/:blogId',

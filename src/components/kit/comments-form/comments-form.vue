@@ -3,7 +3,7 @@
     <div class="comments-form-body">
       <div class="comments-form-user">
         <div class="comments-form-user-avatar no-img-placeholder-colorful no-img-placeholder-horizon">
-          <img :src="userInfo ? userInfo.avatar : ''" alt="头像" />
+          <img :src="userInfo ? userInfo.avatar : ''" alt="" />
         </div>
         <span v-if="userInfo" class="comments-form-user-name">{{ userInfo.userName }}</span>
         <Btn v-else theme="text" @click="handleLogin">请登录</Btn>

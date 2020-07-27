@@ -48,7 +48,29 @@ export const debounce = (fn, wait = 500) => {
     }, wait)
   }
 }
+/**
+ * @desc 节流 对高频事件的优化  如 scroll。
+ * 与防抖区别：防抖在连续的操作过程中只触发一次，而节流可能触发多次，但是频率变低了。
+ */
+export const throttle = (fn, interval = 300) => {
+  var timer = null
+  var timeStart = new Date()
 
+  return function () {
+    const now = new Date()
+    const space = now - timeStart
+    if (space > interval) {
+      fn.apply(this, arguments)
+      timeStart = now
+    } else {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        // 这个 时候 currentTarget 为 null
+        fn.apply(this, arguments)
+      }, interval)
+    }
+  }
+}
 /**
  * @desc 节流（定时器方案） 对高频事件的优化  如 scroll。核心：间隔时间内 打开可执行标志。
  * 优点：确保最终结果，因为是延迟执行。

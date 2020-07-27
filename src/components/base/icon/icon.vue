@@ -39,5 +39,6 @@ export default {
 .z-icon {
   display: inline-block;
   vertical-align: middle;
+  line-height: 1;
 }
 </style>
