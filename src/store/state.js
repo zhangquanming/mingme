@@ -5,18 +5,18 @@ const state = {
       name: '个人博客',
       path: '/blog'
     },
-    // {
-    //   name: '前端资源',
-    //   path: '/resources'
-    // },
+    {
+      name: '前端资源',
+      path: '/resource'
+    },
     // {
     //   name: '豆瓣电影',
     //   path: '/movie'
     // },
-    // {
-    //   name: '网络小说',
-    //   path: '/ebook'
-    // },
+    {
+      name: '网络小说',
+      path: '/ebook'
+    },
     {
       name: '后台管理',
       path: '/admin'
