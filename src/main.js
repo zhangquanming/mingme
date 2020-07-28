@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import '@/common/styles/index.less'
+import '@/styles/index.less'
 
 import * as filters from './filters'
 import importDirective from './directive/'

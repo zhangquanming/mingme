@@ -118,7 +118,7 @@ export default {
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
       .catch(err => {
-        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideError 设置为 false
+        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideAutoError 设置为 true
         if (options && options.hideAutoError && err.code !== 'cancel') {
           return Promise.reject(err)
         } else {
@@ -138,7 +138,7 @@ export default {
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
       .catch(err => {
-        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideError 设置为 false
+        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideAutoError 设置为 true
         if (options && options.hideAutoError && err.code !== 'cancel') {
           return Promise.reject(err)
         } else {
@@ -158,7 +158,7 @@ export default {
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
       .catch(err => {
-        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideError 设置为 false
+        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideAutoError 设置为 true
         if (options && options.hideAutoError && err.code !== 'cancel') {
           return Promise.reject(err)
         } else {
@@ -178,7 +178,7 @@ export default {
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
       .catch(err => {
-        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideError 设置为 false
+        // 可配置需不需要要自动报错 默认会自动报错 如不需要 需在请求中明确将 hideAutoError 设置为 true
         if (options && options.hideAutoError && err.code !== 'cancel') {
           return Promise.reject(err)
         } else {
