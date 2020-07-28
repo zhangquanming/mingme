@@ -50,16 +50,16 @@ export default {
       'categoryIdByValue'
     ])
   },
+  mounted () {
+    this.requestblogList()
+  },
   watch: {
     $route: {
-      hander () {
+      handler () {
         this.requestblogList()
       },
       deep: true
     }
-  },
-  mounted () {
-    this.requestblogList()
   },
   methods: {
     // 请求文章列表
@@ -80,6 +80,7 @@ export default {
     // 搜索文章
     handleSearch (keyword) {
       this.$router.push({ path: '/blog/search', query: { keyword } })
+      console.log(1212)
     }
   }
 }

@@ -25,7 +25,7 @@ export default {
 <style lang="less" scoped>
 .book-poster {
   position: relative;
-  background-image: url('../../../assets/book-bottom.png');
+  background-image: url('../../../assets/images/book-bottom.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-top: 2.3%;

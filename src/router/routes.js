@@ -18,7 +18,7 @@ const EbookChapter = () => import(/* webpackChunkName: 'EbookChapter' */ '@/view
 const EbookRanking = () => import(/* webpackChunkName: 'EbookRanking' */ '@/views/ebook/ebook-ranking/ebook-ranking')
 const EbookSearch = () => import(/* webpackChunkName: 'EbookSearch' */ '@/views/ebook/ebook-search/ebook-search')
 
-const routes = [
+export default [
   {
     path: '/',
     name: '首页',
@@ -34,14 +34,14 @@ const routes = [
         component: BlogList
       },
       {
-        path: ':category',
-        name: '文章',
-        component: BlogList
-      },
-      {
         path: 'search',
         name: '搜索',
         component: BlogSearch
+      },
+      {
+        path: ':category',
+        name: '文章',
+        component: BlogList
       },
       {
         path: 'detail/:blogId',
@@ -98,5 +98,3 @@ const routes = [
     ]
   }
 ]
-
-export default routes

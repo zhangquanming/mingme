@@ -9,7 +9,18 @@ export const showSignUpModal = state => state.showSignUpModal
 export const categoryList = state => state.categoryList
 
 export const categoryIdByValue = state => value => {
-  return value ? state.categoryList.filter(item => item.value === value)[0]._id : ''
+  let categoryId = ''
+  if (value) {
+    const categoryIdFilter = state.categoryList.filter(item => item.value === value)
+    if (categoryIdFilter.length) {
+      categoryId = categoryIdFilter[0]._id
+    } else {
+      categoryId = ''
+    }
+  } else {
+    categoryId = ''
+  }
+  return categoryId
 }
 
 export const blogResult = state => state.blogResult

@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Icon from '@/components/base/icon/'
+import Icon from '@/components/base/icon/icon'
 
 export default {
   name: 'FilterSelect',

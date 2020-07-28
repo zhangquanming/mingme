@@ -59,8 +59,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'categoryList',
-      'categoryIdByValue'
+      'categoryList'
     ]),
     categoryListFormat () {
       return this.categoryList.filter(item => item.value !== '/')
