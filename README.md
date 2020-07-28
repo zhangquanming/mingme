@@ -25,6 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## 目录结构
+```
 .
 ├── public/
 │   ├── favicon.ico
@@ -65,3 +66,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├── package.json
 ├── vue.config.js       // 配置文件
 └── yarn.lock
+```
