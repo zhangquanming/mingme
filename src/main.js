@@ -8,7 +8,7 @@ import '@/styles/index.less'
 import * as filters from './filters'
 import importDirective from './directive/'
 
-import Toast from './components/base/toast/'
+import Toast from './components/base/Toast'
 
 // 注册全局 filter
 Object.keys(filters).forEach(key => {

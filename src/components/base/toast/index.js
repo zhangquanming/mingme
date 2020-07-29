@@ -1,4 +1,4 @@
-import MyToast from './toast.vue'
+import MyToast from './Toast.vue'
 
 export default {
   install (Vue, defaultOptions = {}) {

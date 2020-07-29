@@ -31,9 +31,9 @@
 <script>
 import api from '@/api/index'
 
-import TitleBar from '@/components/kit/title-bar/title-bar'
-import Card from '@/components/base/card/card'
-import NoData from '@/components/kit/no-data/no-data'
+import TitleBar from '@/components/kit/TitleBar/TitleBar'
+import Card from '@/components/base/Card/Card'
+import NoData from '@/components/kit/NoData/NoData'
 
 export default {
   name: 'Resource',

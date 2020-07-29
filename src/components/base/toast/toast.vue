@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Icon from '@/components/base/icon/icon'
+import Icon from '@/components/base/Icon/Icon'
 
 const DEFAULT_OPT = {
   id: 'my-toast',

@@ -69,11 +69,11 @@
 <script>
 import api from '@/api/api-ebook'
 
-import EbookSearch from '../components/ebook-search'
-import EbookMenu from '../components/ebook-menu'
-import EbookPoster from '../components/ebook-poster'
-import TitleBar from '@/components/kit/title-bar/title-bar'
-import ZTable from '@/components/base/table/table'
+import EbookSearch from '../components/EbookSearch'
+import EbookMenu from '../components/EbookMenu'
+import EbookPoster from '../components/EbookPoster'
+import TitleBar from '@/components/kit/TitleBar/TitleBar'
+import ZTable from '@/components/base/Table/Table'
 
 export default {
   name: 'EbookHome',

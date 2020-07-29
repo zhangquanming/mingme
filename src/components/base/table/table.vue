@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import NoData from '@/components/kit/no-data/no-data'
-import RenderTd from './render-td'
+import NoData from '@/components/kit/NoData/NoData'
+import RenderTd from './renderTd'
 
 const prefixCls = 'z-table'
 

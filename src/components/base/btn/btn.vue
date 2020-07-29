@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Icon from '@/components/base/icon/icon'
+import Icon from '@/components/base/Icon/Icon'
 import { oneOf } from '@/utils/tools'
 import mixinsLink from '@/mixins/link'
 

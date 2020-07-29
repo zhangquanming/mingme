@@ -240,10 +240,10 @@
 </template>
 
 <script>
-import Loader from './components/loader'
-import Logo from '@/components/base/logo/logo'
-import HomeNav from './components/home-nav'
-import AppFooter from '@/components/framework/app-footer/app-footer'
+import Loader from './components/Loader'
+import Logo from '@/components/base/Logo/Logo'
+import HomeNav from './components/HomeNav'
+import AppFooter from '@/components/framework/AppFooter/AppFooter'
 
 export default {
   name: 'home',

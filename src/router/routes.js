@@ -1,22 +1,22 @@
 const isMobile = window.matchMedia('(max-width: 992px)').matches
-const name = isMobile ? 'mobile' : 'home'
+const name = isMobile ? 'Mobile' : 'Home'
 
-const AppLayout = () => import(/* webpackChunkName: "AppLayout" */ '@/components/framework/app-layout/app-layout')
+const AppLayout = () => import(/* webpackChunkName: "AppLayout" */ '@/components/framework/AppLayout/AppLayout')
 
 const Index = (indexView) => () => import(/* webpackChunkName: "Index" */ '@/views/index/' + indexView)
 
-const BlogList = () => import(/* webpackChunkName: "BlogList" */ '@/views/blog/blog-list/blog-list')
-const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/blog/blog-detail/blog-detail')
-const BlogSearch = () => import(/* webpackChunkName: 'BlogSearch' */ '@/views/blog/blog-search/blog-search')
+const BlogList = () => import(/* webpackChunkName: "BlogList" */ '@/views/blog/BlogList/BlogList')
+const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/blog/BlogDetail/BlogDetail')
+const BlogSearch = () => import(/* webpackChunkName: 'BlogSearch' */ '@/views/blog/BlogSearch/BlogSearch')
 
-const Resource = () => import(/* webpackChunkName: 'Resource' */ '@/views/resource/resource')
+const Resource = () => import(/* webpackChunkName: 'Resource' */ '@/views/resource/Resource')
 
-const EbookHome = () => import(/* webpackChunkName: 'EbookHome' */ '@/views/ebook/home/home')
-const EbookCategory = () => import(/* webpackChunkName: 'EbookCategory' */ '@/views/ebook/ebook-category/ebook-category')
-const EbookCatalog = () => import(/* webpackChunkName: 'EbookCatalog' */ '@/views/ebook/ebook-catalog/ebook-catalog')
-const EbookChapter = () => import(/* webpackChunkName: 'EbookChapter' */ '@/views/ebook/ebook-chapter/ebook-chapter')
-const EbookRanking = () => import(/* webpackChunkName: 'EbookRanking' */ '@/views/ebook/ebook-ranking/ebook-ranking')
-const EbookSearch = () => import(/* webpackChunkName: 'EbookSearch' */ '@/views/ebook/ebook-search/ebook-search')
+const EbookHome = () => import(/* webpackChunkName: 'EbookHome' */ '@/views/ebook/Home/Home')
+const EbookCategory = () => import(/* webpackChunkName: 'EbookCategory' */ '@/views/ebook/EbookCategory/EbookCategory')
+const EbookCatalog = () => import(/* webpackChunkName: 'EbookCatalog' */ '@/views/ebook/EbookCatalog/EbookCatalog')
+const EbookChapter = () => import(/* webpackChunkName: 'EbookChapter' */ '@/views/ebook/EbookChapter/EbookChapter')
+const EbookRanking = () => import(/* webpackChunkName: 'EbookRanking' */ '@/views/ebook/EbookRanking/EbookRanking')
+const EbookSearch = () => import(/* webpackChunkName: 'EbookSearch' */ '@/views/ebook/EbookSearch/EbookSearch')
 
 export default [
   {
