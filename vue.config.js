@@ -49,7 +49,7 @@ module.exports = {
     open: false, // 配置自动启动浏览器
     proxy: {
       '/api/': {
-        target: 'http://zhangjinpei.cn/',
+        target: 'http://localhost:3000',
         changeOrigin: true,
       },
       '/douban/': {
