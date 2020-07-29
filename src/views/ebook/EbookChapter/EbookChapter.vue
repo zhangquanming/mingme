@@ -1,6 +1,25 @@
 <template>
-  <div v-loading="isLoading" if="ebookPageWrap">
+  <div v-loading="isLoading" id="ebookPageWrap">
     <div class="page-content-wrap">
+      <div class="read-main ebook-paper-bg">
+        <h1 class="read-title">{{ chapterData.title }}</h1>
+        <div>
+          <span>{{ chapterData.content.length }} 字</span>
+        </div>
+        <div class="read-content" v-html="chapterData.content"></div>
+      </div>
+      <div class="read-nav ebook-paper-bg">
+        <router-link :to="{ path: `/ebook/catalog/${chapterData.bookId}/chapter/${chapterData.chapterPrevId}` }">上一章</router-link>
+        <router-link :to="{ path: `/ebook/catalog/${chapterData.bookId}` }">目录</router-link>
+        <router-link :to="{ path: `/ebook/catalog/${chapterData.bookId}/chapter/${chapterData.chapterNextId}` }">下一章</router-link>
+      </div>
+      <div class="chapter-side-bar ebook-paper-bg" id="chapterSideBar">
+        <Btn theme="text">目录</Btn>
+        <Btn theme="text">设置</Btn>
+        <Btn theme="text">手机</Btn>
+        <Btn theme="text">书页</Btn>
+      </div>
+
       <div>阅读主题 字体大小 页面宽度</div>
     </div>
   </div>
@@ -8,14 +27,14 @@
 
 <script>
 import api from '@/api/api-ebook'
-// import Btn from '@/components/base/Btn/Btn'
+import Btn from '@/components/base/Btn/Btn'
 
 import { throttle } from '@/utils/tools'
 
 export default {
   name: 'EbookChapter',
   components: {
-    // Btn
+    Btn
   },
   data () {
     return {
