@@ -12,7 +12,7 @@ const externals = {
 
 const cdn = {
   dev: {
-    css: ['//at.alicdn.com/t/font_1905390_vwkf9yxdeg.css'],
+    css: ['//at.alicdn.com/t/font_1905390_8dxtsz9b88r.css'],
     js: [
       'https://cdn.bootcss.com/vue/2.6.6/vue.js',
       'https://cdn.bootcss.com/vue-router/3.0.1/vue-router.js',
@@ -21,7 +21,7 @@ const cdn = {
     ],
   },
   pro: {
-    css: ['//at.alicdn.com/t/font_1905390_vwkf9yxdeg.css'],
+    css: ['//at.alicdn.com/t/font_1905390_8dxtsz9b88r.css'],
     js: [
       'https://cdn.bootcss.com/vue/2.6.6/vue.min.js',
       'https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js',
@@ -49,7 +49,7 @@ module.exports = {
     open: false, // 配置自动启动浏览器
     proxy: {
       '/api/': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3000',//http://localhost:3000
         changeOrigin: true,
       },
       '/douban/': {
@@ -59,13 +59,20 @@ module.exports = {
           '^/douban': '',
         },
       },
+      '/douban/movie/': {
+        target: 'http://api.douban.com/v2/movie',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/douban/movie/': '',
+        },
+      },
       '/doubanOld/': {
         target: 'https://movie.douban.com',
         changeOrigin: true,
         pathRewrite: {
           '^/doubanOld/': '',
         },
-      },
+      }
     },
   },
   runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本

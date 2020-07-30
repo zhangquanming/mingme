@@ -1,5 +1,5 @@
 import routes from './routes'
-// import store from '@/store/'
+import store from '@/store/'
 
 const scrollBehavior = (to, from, savedPosition) => {
   if (to.hash) {
@@ -23,11 +23,11 @@ const createRouter = () =>
 
 const router = createRouter()
 
-// router.beforeEach(async (to, from, next) => {
-//   const categoryList = store.getters['categoryList']
-//   if (categoryList.length === 0) {
-//     await store.dispatch('getCategoryList')
-//   }
-//   next()
-// })
+router.beforeEach(async (to, from, next) => {
+  const categoryList = store.getters['categoryList']
+  if (categoryList.length === 0) {
+    await store.dispatch('getCategoryList')
+  }
+  next()
+})
 export default router

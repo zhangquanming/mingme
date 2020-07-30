@@ -11,6 +11,10 @@ const BlogSearch = () => import(/* webpackChunkName: 'BlogSearch' */ '@/views/bl
 
 const Resource = () => import(/* webpackChunkName: 'Resource' */ '@/views/resource/Resource')
 
+const MovieHome = () => import(/* webpackChunkName: 'MovieHome' */ '@/views/movie/MovieHome/MovieHome')
+const MovieTop250 = () => import(/* webpackChunkName: 'MovieTop250' */ '@/views/movie/MovieTop250/MovieTop250')
+const MovieDetail = () => import(/* webpackChunkName: 'MovieDetail' */ '@/views/movie/MovieDetail/MovieDetail')
+
 const EbookHome = () => import(/* webpackChunkName: 'EbookHome' */ '@/views/ebook/Home/Home')
 const EbookCategory = () => import(/* webpackChunkName: 'EbookCategory' */ '@/views/ebook/EbookCategory/EbookCategory')
 const EbookCatalog = () => import(/* webpackChunkName: 'EbookCatalog' */ '@/views/ebook/EbookCatalog/EbookCatalog')
@@ -62,37 +66,58 @@ export default [
     ]
   },
   {
+    path: '/movie',
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        name: '电影-首页',
+        component: MovieHome
+      },
+      {
+        path: 'top250',
+        name: 'top250',
+        component: MovieTop250
+      },
+      {
+        path: 'detail/:movieId',
+        name: '电影-详情',
+        component: MovieDetail
+      }
+    ]
+  },
+  {
     path: '/ebook',
     component: AppLayout,
     children: [
       {
         path: '',
-        name: '电子书-首页',
+        name: '小说-首页',
         component: EbookHome
       },
       {
         path: 'category/:categoryName',
-        name: '电子书-分类',
+        name: '小说-分类',
         component: EbookCategory
       },
       {
         path: 'catalog/:bookId',
-        name: '电子书-章节目录信息',
+        name: '小说-章节目录信息',
         component: EbookCatalog
       },
       {
         path: 'catalog/:bookId/chapter/:chapterId',
-        name: '电子书-正文',
+        name: '小说-正文',
         component: EbookChapter
       },
       {
         path: 'ranking/:rankType',
-        name: '电子书-排行榜单',
+        name: '小说-排行榜单',
         component: EbookRanking
       },
       {
         path: 'search',
-        name: '电子书-搜索',
+        name: '小说-搜索',
         component: EbookSearch
       }
     ]

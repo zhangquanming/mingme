@@ -9,10 +9,10 @@ const state = {
       name: '前端资源',
       path: '/resource'
     },
-    // {
-    //   name: '豆瓣电影',
-    //   path: '/movie'
-    // },
+    {
+      name: '豆瓣电影',
+      path: '/movie'
+    },
     {
       name: '网络小说',
       path: '/ebook'
