@@ -4,9 +4,9 @@
       <icon class="app-menu-handle" type="iconcaidan" :size="32" @click="handleToggleMenu"></icon>
       <ul class="app-menu-list">
         <router-link class="app-menu-link" active-class="current" v-for="(nav, index) in navList" :key="index" :to="nav.path" tag="li">{{ nav.name }}</router-link>
-        <!-- <li class="app-menu-link app-menu-login">
-        <LoginControl :theme="theme" />
-      </li> -->
+        <li class="app-menu-link app-menu-login">
+          <login-control :theme="theme" />
+        </li>
       </ul>
     </div>
     <div class="app-menu-mask" v-if="isShowMenu" @click="handleToggleMenu"></div>
@@ -14,13 +14,21 @@
 </template>
 
 <script>
+import LoginControl from '@/components/framework/AppMenu/LoginControl'
 import Icon from '@/components/base/Icon/Icon'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'AppMenu',
   components: {
-    Icon
+    Icon,
+    LoginControl
+  },
+  props: {
+    theme: {
+      type: String,
+      default: 'white'
+    }
   },
   data () {
     return {

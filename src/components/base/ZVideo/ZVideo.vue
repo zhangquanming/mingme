@@ -14,7 +14,7 @@
           <icon :type="isPlaying ? 'iconpause' : 'iconplay'" :size="28" @click="handleTogglePlay" />
         </div>
         <div class="z-video-control-progress">
-          <z-progress :value="progressValue" height="100%" @on-click="handleChangeProgress" />
+          <z-progress :value="progressValue" height="10px" @on-click="handleChangeProgress" />
         </div>
         <div class="z-video-control-time">{{ videoCurrentTime | formatTime }}</div>
         <div class="z-video-control-duration">{{ videoDuration | formatTime }}</div>
