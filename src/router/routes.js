@@ -24,6 +24,27 @@ const EbookChapter = () => import(/* webpackChunkName: 'EbookChapter' */ '@/view
 const EbookRanking = () => import(/* webpackChunkName: 'EbookRanking' */ '@/views/ebook/EbookRanking/EbookRanking')
 const EbookSearch = () => import(/* webpackChunkName: 'EbookSearch' */ '@/views/ebook/EbookSearch/EbookSearch')
 
+const UserLayout = () => import(/* webpackChunkName: 'UserLayout' */ '@/views/user/components/UserLayout')
+const UserHome = () => import(/* webpackChunkName: 'UserHome' */ '@/views/user/UserHome/UserHome')
+const UserProfile = () => import(/* webpackChunkName: 'UserProfile' */ '@/views/user/UserProfile/UserProfile')
+const UserAvatar = () => import(/* webpackChunkName: 'UserAvatar' */ '@/views/user/UserAvatar/UserAvatar')
+const UserPassword = () => import(/* webpackChunkName: 'UserPassword' */ '@/views/user/UserPassword/UserPassword')
+const UserBlog = () => import(/* webpackChunkName: 'UserBlog' */ '@/views/user/UserBlog/UserBlog')
+const UserWrite = () => import(/* webpackChunkName: 'UserWrite' */ '@/views/user/UserWrite/UserWrite')
+const UserFavorites = () => import(/* webpackChunkName: 'UserFavorites' */ '@/views/user/UserFavorites/UserFavorites')
+const UserComment = () => import(/* webpackChunkName: 'UserComment' */ '@/views/user/UserComment/UserComment')
+
+const AdminLayout = () => import(/* webpackChunkName: 'AdminLayout' */ '@/components/framework/admin-layout/')
+const AdminHome = () => import(/* webpackChunkName: 'AdminHome' */ '@/views/admin/home/')
+const AdminWrite = () => import(/* webpackChunkName: 'AdminWrite' */ '@/views/admin/admin-write/')
+const AdminArticle = () => import(/* webpackChunkName: 'AdminArticle' */ '@/views/admin/admin-article/')
+const AdminCatgory = () => import(/* webpackChunkName: 'AdminCatgory' */ '@/views/admin/admin-category/')
+const AdminTag = () => import(/* webpackChunkName: 'AdminTag' */ '@/views/admin/admin-tag/')
+const AdminResourceType = () => import(/* webpackChunkName: 'AdminResourceType' */ '@/views/admin/admin-resource-type/')
+const AdminResource = () => import(/* webpackChunkName: 'AdminResource' */ '@/views/admin/admin-resource/')
+const AdminUser = () => import(/* webpackChunkName: 'AdminUser' */ '@/views/admin/admin-user/')
+const AdminComment = () => import(/* webpackChunkName: 'AdminComment' */ '@/views/admin/admin-comment/')
+
 export default [
   {
     path: '/',
@@ -125,6 +146,176 @@ export default [
         path: 'search',
         name: '小说-搜索',
         component: EbookSearch
+      }
+    ]
+  },
+  {
+    path: '/user',
+    component: AppLayout,
+    children: [
+      {
+        path: '',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '用户中心',
+            component: UserHome
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '个人资料',
+            component: UserProfile
+          }
+        ]
+      },
+      {
+        path: 'avatar',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '修改头像',
+            component: UserAvatar
+          }
+        ]
+      },
+      {
+        path: 'password',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '修改密码',
+            component: UserPassword
+          }
+        ]
+      },
+      {
+        path: 'blog',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '我的作品',
+            component: UserBlog
+          }
+        ]
+      },
+      {
+        path: 'write',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '发布文章',
+            component: UserWrite
+          }
+        ]
+      },
+      {
+        path: 'write/:blogId',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '编辑文章',
+            component: UserWrite
+          }
+        ]
+      },
+      {
+        path: 'favorites',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '我的喜欢',
+            component: UserFavorites
+          }
+        ]
+      },
+      {
+        path: 'comment',
+        name: '',
+        component: UserLayout,
+        children: [
+          {
+            path: '',
+            name: '我的评论',
+            component: UserComment
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/admin',
+    component: AdminLayout,
+    children: [
+      {
+        path: '',
+        name: '管理后台-首页',
+        component: AdminHome
+      },
+      {
+        path: 'write',
+        name: '写文章',
+        component: AdminWrite
+      },
+      {
+        path: 'write/:blogId',
+        name: '编辑文章作品',
+        component: AdminWrite
+      },
+      {
+        path: 'article',
+        name: '文章管理',
+        component: AdminArticle
+      },
+      {
+        path: 'category',
+        name: '文章分类管理',
+        component: AdminCatgory
+      },
+      {
+        path: 'tag',
+        name: '文章标签管理',
+        component: AdminTag
+      },
+      {
+        path: 'resourceType',
+        name: '前端资源类别管理',
+        component: AdminResourceType
+      },
+      {
+        path: 'resource',
+        name: '前端资源管理',
+        component: AdminResource
+      },
+      {
+        path: 'comment',
+        name: '评论管理',
+        component: AdminComment
+      },
+      {
+        path: 'user',
+        name: '用户管理',
+        component: AdminUser
       }
     ]
   }
