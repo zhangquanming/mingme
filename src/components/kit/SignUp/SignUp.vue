@@ -69,7 +69,7 @@ export default {
           this.handleCloseModel()
         })
         .catch(() => {
-          this.isSignUpLoading = true
+          this.isSignUpLoading = false
         })
     },
 

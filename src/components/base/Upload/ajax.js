@@ -1,3 +1,4 @@
+// https://github.com/ElemeFE/element/blob/dev/packages/upload/src/ajax.js
 
 function getError (action, option, xhr) {
   const msg = `fail to post ${action} ${xhr.status}'`
@@ -5,6 +6,7 @@ function getError (action, option, xhr) {
   err.status = xhr.status
   err.method = 'post'
   err.url = action
+  err.option = option
   return err
 }
 
@@ -72,8 +74,8 @@ export default function upload (option) {
   //   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
   // }
 
-  for (let item in headers) {
-    if (headers.hasOwnProperty(item) && headers[item] !== null) {
+  for (const item in headers) {
+    if (Object.hasOwnProperty.call(headers, item) && headers[item] !== null) {
       xhr.setRequestHeader(item, headers[item])
     }
   }

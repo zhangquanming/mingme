@@ -7,11 +7,14 @@
 
 <script>
 import ajax from './ajax'
+import { handleCompress, dataURI2Blob } from '@/utils/img-healper'
+
 export default {
-  name: 'Uplaod',
+  name: 'Upload',
   props: {
     action: {
       type: String
+      // required: true,
     },
     headers: {
       type: Object,
@@ -87,6 +90,7 @@ export default {
       if (this.disabled) return
       this.$refs.input.click()
     },
+
     handleChange (e) {
       const files = e.target.files
       if (!files) {
@@ -107,6 +111,7 @@ export default {
         this.upload(file)
       })
     },
+
     upload (file) {
       // 如果 不传递了 beforeUpload 则 默认自动上传
       if (!this.beforeUpload) {
@@ -135,7 +140,8 @@ export default {
         // this.$emit('cancel', file);
       }
     },
-    post (file) {
+
+    async post (file) {
       // check action
       if (!this.action) {
         this.$toast.error('请传 action 或者 beforeUpload')
@@ -162,13 +168,26 @@ export default {
         }
       }
 
-      let formData = new FormData()
-      formData.append(this.name, file)
+      let compressFileBase64 = null
+      let compressFileBlob = file
+
+      if (!file.name.includes('.gif')) {
+        compressFileBase64 = await handleCompress(file)
+        compressFileBlob = dataURI2Blob(compressFileBase64)
+      }
+
+      // compressFileBlob.lastModifiedDate = new Date();
+      // compressFileBlob.name = file.name;
+
+      // const formData = new FormData();
+      // formData.append(this.name, compressFileBlob);
+      // return;
+
       ajax({
         headers: this.headers,
         withCredentials: this.withCredentials,
-        file: file,
-        data: this.data,
+        file: compressFileBlob,
+        data: { ...this.data, fileItemName: file.name },
         filename: this.name,
         action: this.action,
         onProgress: e => {
