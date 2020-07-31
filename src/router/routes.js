@@ -5,6 +5,8 @@ const AppLayout = () => import(/* webpackChunkName: "AppLayout" */ '@/components
 
 const Index = (indexView) => () => import(/* webpackChunkName: "Index" */ '@/views/index/' + indexView)
 
+const ForgetPassword = () => import(/* webpackChunkName: 'ForgetPwd' */ '@/views/forget/forgetPassword')
+
 const BlogList = () => import(/* webpackChunkName: "BlogList" */ '@/views/blog/BlogList/BlogList')
 const BlogDetail = () => import(/* webpackChunkName: 'BlogDetail' */ '@/views/blog/BlogDetail/BlogDetail')
 const BlogSearch = () => import(/* webpackChunkName: 'BlogSearch' */ '@/views/blog/BlogSearch/BlogSearch')
@@ -27,6 +29,10 @@ export default [
     path: '/',
     name: '首页',
     component: Index(name)
+  },
+  {
+    path: '/forget',
+    component: ForgetPassword
   },
   {
     path: '/blog',

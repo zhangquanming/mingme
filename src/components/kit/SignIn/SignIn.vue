@@ -88,7 +88,7 @@ export default {
      * @desc 按钮点击事件 忘记密码
      */
     handleForgetPwd () {
-      this.$router.push('/forget_pwd')
+      this.$router.push('/forget')
       this.$store.dispatch('toggleSignInModal', false)
       this.$store.dispatch('toggleSignUpModal', false)
     },
