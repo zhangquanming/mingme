@@ -34,16 +34,16 @@ const UserWrite = () => import(/* webpackChunkName: 'UserWrite' */ '@/views/user
 const UserFavorites = () => import(/* webpackChunkName: 'UserFavorites' */ '@/views/user/UserFavorites/UserFavorites')
 const UserComment = () => import(/* webpackChunkName: 'UserComment' */ '@/views/user/UserComment/UserComment')
 
-const AdminLayout = () => import(/* webpackChunkName: 'AdminLayout' */ '@/components/framework/admin-layout/')
-const AdminHome = () => import(/* webpackChunkName: 'AdminHome' */ '@/views/admin/home/')
-const AdminWrite = () => import(/* webpackChunkName: 'AdminWrite' */ '@/views/admin/admin-write/')
-const AdminArticle = () => import(/* webpackChunkName: 'AdminArticle' */ '@/views/admin/admin-article/')
-const AdminCatgory = () => import(/* webpackChunkName: 'AdminCatgory' */ '@/views/admin/admin-category/')
-const AdminTag = () => import(/* webpackChunkName: 'AdminTag' */ '@/views/admin/admin-tag/')
-const AdminResourceType = () => import(/* webpackChunkName: 'AdminResourceType' */ '@/views/admin/admin-resource-type/')
-const AdminResource = () => import(/* webpackChunkName: 'AdminResource' */ '@/views/admin/admin-resource/')
-const AdminUser = () => import(/* webpackChunkName: 'AdminUser' */ '@/views/admin/admin-user/')
-const AdminComment = () => import(/* webpackChunkName: 'AdminComment' */ '@/views/admin/admin-comment/')
+// const AdminLayout = () => import(/* webpackChunkName: 'AdminLayout' */ '@/components/framework/admin-layout/')
+// const AdminHome = () => import(/* webpackChunkName: 'AdminHome' */ '@/views/admin/home/')
+// const AdminWrite = () => import(/* webpackChunkName: 'AdminWrite' */ '@/views/admin/admin-write/')
+// const AdminArticle = () => import(/* webpackChunkName: 'AdminArticle' */ '@/views/admin/admin-article/')
+// const AdminCatgory = () => import(/* webpackChunkName: 'AdminCatgory' */ '@/views/admin/admin-category/')
+// const AdminTag = () => import(/* webpackChunkName: 'AdminTag' */ '@/views/admin/admin-tag/')
+// const AdminResourceType = () => import(/* webpackChunkName: 'AdminResourceType' */ '@/views/admin/admin-resource-type/')
+// const AdminResource = () => import(/* webpackChunkName: 'AdminResource' */ '@/views/admin/admin-resource/')
+// const AdminUser = () => import(/* webpackChunkName: 'AdminUser' */ '@/views/admin/admin-user/')
+// const AdminComment = () => import(/* webpackChunkName: 'AdminComment' */ '@/views/admin/admin-comment/')
 
 export default [
   {
@@ -262,61 +262,61 @@ export default [
         ]
       }
     ]
-  },
-  {
-    path: '/admin',
-    component: AdminLayout,
-    children: [
-      {
-        path: '',
-        name: '管理后台-首页',
-        component: AdminHome
-      },
-      {
-        path: 'write',
-        name: '写文章',
-        component: AdminWrite
-      },
-      {
-        path: 'write/:blogId',
-        name: '编辑文章作品',
-        component: AdminWrite
-      },
-      {
-        path: 'article',
-        name: '文章管理',
-        component: AdminArticle
-      },
-      {
-        path: 'category',
-        name: '文章分类管理',
-        component: AdminCatgory
-      },
-      {
-        path: 'tag',
-        name: '文章标签管理',
-        component: AdminTag
-      },
-      {
-        path: 'resourceType',
-        name: '前端资源类别管理',
-        component: AdminResourceType
-      },
-      {
-        path: 'resource',
-        name: '前端资源管理',
-        component: AdminResource
-      },
-      {
-        path: 'comment',
-        name: '评论管理',
-        component: AdminComment
-      },
-      {
-        path: 'user',
-        name: '用户管理',
-        component: AdminUser
-      }
-    ]
   }
+  // {
+  //   path: '/admin',
+  //   component: AdminLayout,
+  //   children: [
+  //     {
+  //       path: '',
+  //       name: '管理后台-首页',
+  //       component: AdminHome
+  //     },
+  //     {
+  //       path: 'write',
+  //       name: '写文章',
+  //       component: AdminWrite
+  //     },
+  //     {
+  //       path: 'write/:blogId',
+  //       name: '编辑文章作品',
+  //       component: AdminWrite
+  //     },
+  //     {
+  //       path: 'article',
+  //       name: '文章管理',
+  //       component: AdminArticle
+  //     },
+  //     {
+  //       path: 'category',
+  //       name: '文章分类管理',
+  //       component: AdminCatgory
+  //     },
+  //     {
+  //       path: 'tag',
+  //       name: '文章标签管理',
+  //       component: AdminTag
+  //     },
+  //     {
+  //       path: 'resourceType',
+  //       name: '前端资源类别管理',
+  //       component: AdminResourceType
+  //     },
+  //     {
+  //       path: 'resource',
+  //       name: '前端资源管理',
+  //       component: AdminResource
+  //     },
+  //     {
+  //       path: 'comment',
+  //       name: '评论管理',
+  //       component: AdminComment
+  //     },
+  //     {
+  //       path: 'user',
+  //       name: '用户管理',
+  //       component: AdminUser
+  //     }
+  //   ]
+  // }
 ]

@@ -1,30 +1,35 @@
 # mingme
 
 ## Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 yarn build
 ```
 
 ### Lints and fixes files
+
 ```
 yarn lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
 ## 目录结构
+
 ```
 .
 ├── public/
@@ -53,7 +58,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 │       ├── ebook/         // 网路小说模块
 │       ├── index          // 首页模块
 │       ├── movie          // 豆瓣电影模块
-│       └── resource       // 前端资源模块
+│       ├── resource       // 前端资源模块
+│       └── user           // 个人中心模块
 ├── .env                // 默认环境变量
 ├── .env.development    // 开发环境变量
 ├── .env.production     // 生产环境变量
