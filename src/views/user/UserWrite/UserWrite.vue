@@ -1,21 +1,16 @@
 <template>
-  <div></div>
+  <div style="height: 100%;">
+    <WriteEditor></WriteEditor>
+  </div>
 </template>
 
 <script>
+import WriteEditor from '@/views/admin/AdminWrite/AdminWrite'
+
 export default {
-  name: '',
-  components: {},
-  data () {
-    return {}
-  },
-  computed: {},
-  watch: {},
-  created () { },
-  mounted () { },
-  methods: {}
+  name: 'UserWrite',
+  components: {
+    WriteEditor
+  }
 }
 </script>
-
-<style lang="less" scoped>
-</style>

@@ -204,7 +204,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'userInfos'
+      'userInfo'
     ])
   },
   mounted () {

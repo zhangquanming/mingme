@@ -50,9 +50,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('common', {
-      userInfo: 'getUserInfo'
-    }),
+    ...mapGetters([
+      'userInfo'
+    ]),
     passwordLevalList () {
       return [
         {
@@ -105,8 +105,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      toggleSignInModal: 'common/toggleSignInModal',
-      handleChangeUserInfo: 'common/changeUserInfo'
+      toggleSignInModal: 'toggleSignInModal',
+      handleChangeUserInfo: 'changeUserInfo'
     }),
 
     /**
