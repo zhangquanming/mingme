@@ -32,7 +32,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ```
 .
-├── public/           //公共文件
+├── public/
 │   ├── favicon.ico
 │   └── index.html
 ├── src/
