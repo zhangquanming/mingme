@@ -67,7 +67,9 @@ instance.interceptors.request.use(
       config.headers.Authorization = `Bearer ${token}`
     }
     // 设置自定义 headers
-    config.headers = Object.assign({}, config.headers, config.customOptins)
+    if (config.customOptins && config.customOptins.headers) {
+      config.headers = Object.assign({}, config.headers, config.customOptins.headers)
+    }
     // 设置自定义 baseURL
     if (config.customOptins && config.customOptins.baseURL) {
       config.baseURL = config.customOptins.baseURL
@@ -113,7 +115,7 @@ export default {
       method: 'get',
       url,
       params, // get 请求时带的参数 叫 'params'
-      customHeaders: { ...options }
+      customOptins: { ...options }
     })
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
@@ -133,7 +135,7 @@ export default {
       method: 'post',
       url,
       data, // post 请求时带的参数 叫 'data'
-      customHeaders: { ...options }
+      customOptins: { ...options }
     })
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
@@ -153,7 +155,7 @@ export default {
       method: 'put',
       url,
       data, // post 请求时带的参数 叫 'data'
-      customHeaders: { ...options }
+      customOptins: { ...options }
     })
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
@@ -173,7 +175,7 @@ export default {
       method: 'delete',
       url,
       data, // post 请求时带的参数 叫 'data'
-      customHeaders: { ...options }
+      customOptins: { ...options }
     })
       .then(response => checkHttpStatus(response))
       .then(res => checkBackendCode(res))
